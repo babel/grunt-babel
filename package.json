@@ -1,6 +1,6 @@
 {
   "name": "grunt-6to5",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Turn ES6 code into vanilla ES5 with no runtime required",
   "license": "MIT",
   "repository": "sindresorhus/grunt-6to5",
