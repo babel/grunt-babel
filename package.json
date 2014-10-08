@@ -37,7 +37,7 @@
     "6to5"
   ],
   "dependencies": {
-    "6to5": "^0.1.1"
+    "6to5": "^1.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
