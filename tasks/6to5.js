@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 
 		this.files.forEach(function (el) {
 			options.filename = el.src[0];
-			grunt.file.write(el.dest, to5.transformFileSync(el.src[0], options));
+			grunt.file.write(el.dest, to5.transformFileSync(el.src[0], options).code);
 		});
 	});
 };
