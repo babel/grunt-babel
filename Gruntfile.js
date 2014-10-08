@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 		'6to5': {
 			compile: {
 				options: {
-					sourceMap: "inline"
+					sourceMap: true
 				},
 				files: {
 					'test/tmp/fixture.js': 'test/fixture.js'
