@@ -7,7 +7,7 @@ exports['6to5'] = {
 		test.ok(/function/.test(code));
 
 		var map = fs.readFileSync('test/tmp/fixture.js.map', 'utf8');
-		test.deepEqual(JSON.parse(map).names, ['Test']);
+		test.deepEqual(JSON.parse(map).sources, ['fixture.js']);
 
 		test.done();
 	}
