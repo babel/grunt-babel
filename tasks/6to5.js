@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 			grunt.file.write(el.dest, res.code);
 
 			if (res.map) {
-				grunt.file.write(el.dest + '.map', res.map);
+				grunt.file.write(el.dest + '.map', JSON.stringify(res.map));
 			}
 		});
 	});
