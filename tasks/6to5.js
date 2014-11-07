@@ -13,6 +13,9 @@ module.exports = function (grunt) {
 			grunt.file.write(el.dest, res.code);
 
 			if (res.map) {
+				res.map.file = options.filename;
+				res.map.sources[0] = options.filename;
+				
 				grunt.file.write(el.dest + '.map', JSON.stringify(res.map));
 			}
 		});
