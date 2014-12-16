@@ -36,7 +36,7 @@ grunt.registerTask('default', ['6to5']);
 
 ## Options
 
-See the `6to5` [options](https://github.com/sebmck/6to5#options), except for `filename` which is handled for you.
+See the `6to5` [options](https://6to5.org/usage.html#options), except for `filename` which is handled for you.
 
 
 ## License
