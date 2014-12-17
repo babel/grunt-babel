@@ -6,7 +6,8 @@ module.exports = function (grunt) {
 		var options = this.options();
 
 		this.files.forEach(function (el) {
-			options.filename = el.src[0];
+			delete options.filename;
+			delete options.filenameRelative;
 
 			var res = to5.transformFileSync(el.src[0], options);
 
