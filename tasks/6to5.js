@@ -11,7 +11,9 @@ module.exports = function (grunt) {
 
 			var res = to5.transformFileSync(el.src[0], options);
 
-			grunt.file.write(el.dest, res.code);
+			var sourceMappingURL = grunt.util.linefeed + '//# sourceMappingURL=' + el.dest.split('/').pop() + '.map';
+
+			grunt.file.write(el.dest, res.code + sourceMappingURL);
 
 			if (res.map) {
 				grunt.file.write(el.dest + '.map', JSON.stringify(res.map));
