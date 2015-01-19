@@ -1,5 +1,6 @@
 'use strict';
 var to5 = require('6to5');
+var path = require('path');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('6to5', 'Transpile ES6 to ES5', function () {
@@ -13,7 +14,7 @@ module.exports = function (grunt) {
 
 			var sourceMappingURL = '';
 			if (res.map) {
-				sourceMappingURL = grunt.util.linefeed + '//# sourceMappingURL=' + el.dest.split('/').pop() + '.map';
+				sourceMappingURL = '\n//# sourceMappingURL=' + path.basename(el.dest) + '.map';
 			}
 
 			grunt.file.write(el.dest, res.code + sourceMappingURL);
