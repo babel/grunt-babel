@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function (grunt) {
 	grunt.initConfig({
-		'6to5': {
+		'babel': {
 			compile: {
 				options: {
 					sourceMap: true
@@ -23,5 +23,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-	grunt.registerTask('default', ['clean', '6to5', 'nodeunit', 'clean']);
+	grunt.registerTask('default', ['clean', 'babel', 'nodeunit', 'clean']);
 };

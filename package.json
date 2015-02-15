@@ -1,9 +1,9 @@
 {
-  "name": "grunt-6to5",
+  "name": "grunt-babel",
   "version": "3.0.1",
   "description": "Turn ES6 code into vanilla ES5 with no runtime required",
   "license": "MIT",
-  "repository": "6to5/grunt-6to5",
+  "repository": "babel/grunt-babel",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
@@ -34,10 +34,10 @@
     "harmony",
     "compiler",
     "transpiler",
-    "6to5"
+    "babel"
   ],
   "dependencies": {
-    "6to5": "^3.0.0"
+    "babel-core": "^4.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

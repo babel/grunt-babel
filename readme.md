@@ -1,14 +1,14 @@
-# grunt-6to5 [![Build Status](https://travis-ci.org/6to5/grunt-6to5.svg?branch=master)](https://travis-ci.org/6to5/grunt-6to5)
+# grunt-babel [![Build Status](https://travis-ci.org/babel/grunt-babel.svg?branch=master)](https://travis-ci.org/babel/grunt-babel)
 
-> Turn ES6 code into vanilla ES5 with no runtime required using [6to5](https://github.com/sebmck/6to5)
+> Turn ES6 code into vanilla ES5 with no runtime required using [babel](https://github.com/babel/babel)
 
-*Issues with the output should be reported on the 6to5 [issue tracker](https://github.com/sebmck/6to5/issues).*
+*Issues with the output should be reported on the babel [issue tracker](https://github.com/babel/babel/issues).*
 
 
 ## Install
 
 ```sh
-$ npm install --save-dev grunt-6to5
+$ npm install --save-dev grunt-babel
 ```
 
 
@@ -18,7 +18,7 @@ $ npm install --save-dev grunt-6to5
 require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
 grunt.initConfig({
-	'6to5': {
+	'babel': {
 		options: {
 			sourceMap: true
 		},
@@ -30,13 +30,13 @@ grunt.initConfig({
 	}
 });
 
-grunt.registerTask('default', ['6to5']);
+grunt.registerTask('default', ['babel']);
 ```
 
 
 ## Options
 
-See the `6to5` [options](https://6to5.org/usage.html#options), except for `filename` which is handled for you.
+See the `babel` [options](https://babeljs.io/docs/usage/options), except for `filename` which is handled for you.
 
 
 ## License
