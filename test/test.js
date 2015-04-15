@@ -1,7 +1,7 @@
 'use strict';
 var fs = require('fs');
 
-exports['babel'] = {
+exports.babel = {
 	compile: function (test) {
 		var code = fs.readFileSync('test/tmp/fixture.js', 'utf8');
 		test.ok(/function/.test(code));

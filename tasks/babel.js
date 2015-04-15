@@ -1,6 +1,6 @@
 'use strict';
-var babel = require('babel-core');
 var path = require('path');
+var babel = require('babel-core');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('babel', 'Transpile ES6 to ES5', function () {

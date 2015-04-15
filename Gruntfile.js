@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function (grunt) {
 	grunt.initConfig({
-		'babel': {
+		babel: {
 			compile: {
 				options: {
 					sourceMap: true

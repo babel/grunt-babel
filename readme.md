@@ -7,7 +7,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save-dev grunt-babel
 ```
 
@@ -18,7 +18,7 @@ $ npm install --save-dev grunt-babel
 require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
 grunt.initConfig({
-	'babel': {
+	babel: {
 		options: {
 			sourceMap: true
 		},
