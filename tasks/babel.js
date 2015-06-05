@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 				sourceMappingURL = '\n//# sourceMappingURL=' + path.basename(el.dest) + '.map';
 			}
 
-			grunt.file.write(el.dest, res.code + sourceMappingURL);
+			grunt.file.write(el.dest, res.code + sourceMappingURL + '\n');
 
 			if (res.map) {
 				grunt.file.write(el.dest + '.map', JSON.stringify(res.map));
