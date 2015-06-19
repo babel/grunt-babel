@@ -9,6 +9,10 @@ module.exports = function (grunt) {
 		this.files.forEach(function (el) {
 			delete options.filename;
 			delete options.filenameRelative;
+			
+			if (el.options){
+				options = el.options;
+			}
 
 			var res = babel.transformFileSync(el.src[0], options);
 
