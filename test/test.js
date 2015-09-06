@@ -7,7 +7,7 @@ exports.babel = {
 		test.ok(/function/.test(code));
 
 		var map = fs.readFileSync('test/tmp/fixture.js.map', 'utf8');
-		test.deepEqual(JSON.parse(map).sources, ['test/fixture.js']);
+		test.deepEqual(JSON.parse(map).sources, ['../fixture.js']);
 
 		test.ok(/\/\/# sourceMappingURL=fixture.js.map\n$/.test(code));
 
