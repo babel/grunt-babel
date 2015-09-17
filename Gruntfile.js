@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 					sourceMap: true
 				},
 				files: {
-					'test/tmp/fixture.js': 'test/fixture.js'
+					'test/tmp/fixture-compiled.js': 'test/fixture.js'
 				}
 			}
 		},

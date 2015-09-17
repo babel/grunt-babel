@@ -10,6 +10,9 @@ module.exports = function (grunt) {
 			delete options.filename;
 			delete options.filenameRelative;
 
+			options.sourceFileName = path.relative(path.dirname(el.dest), el.src[0]);
+			options.sourceMapTarget = path.basename(el.dest);
+
 			var res = babel.transformFileSync(el.src[0], options);
 
 			var sourceMappingURL = '';
