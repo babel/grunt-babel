@@ -1,6 +1,6 @@
 {
   "name": "grunt-babel",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Turn ES6 code into vanilla ES5 with no runtime required",
   "license": "MIT",
   "repository": "babel/grunt-babel",
