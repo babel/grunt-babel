@@ -10,7 +10,10 @@ module.exports = function (grunt) {
 			delete options.filename;
 			delete options.filenameRelative;
 
-			options.sourceFileName = path.posix.relative(path.dirname(el.dest), el.src[0]);
+			options.sourceFileName = path.relative(path.dirname(el.dest), el.src[0]);
+			if (process.platform === 'win32') {
+				options.sourceFileName = options.sourceFileName.replace(/\\/g, '/');
+			}
 			options.sourceMapTarget = path.basename(el.dest);
 
 			var res = babel.transformFileSync(el.src[0], options);
