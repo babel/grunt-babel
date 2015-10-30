@@ -21,7 +21,7 @@ grunt.initConfig({
 	babel: {
 		options: {
 			sourceMap: true,
-			presets: ['babel-preset-es2015']
+			presets: ['es2015']
 		},
 		dist: {
 			files: {
