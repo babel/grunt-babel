@@ -4,7 +4,8 @@ module.exports = function (grunt) {
 		babel: {
 			compile: {
 				options: {
-					sourceMap: true
+					sourceMap: true,
+					presets: ['babel-preset-es2015']
 				},
 				files: {
 					'test/tmp/fixture-compiled.js': 'test/fixture.js'
