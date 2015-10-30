@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install --save-dev grunt-babel
+$ npm install --save-dev grunt-babel babel-preset-es2015
 ```
 
 
@@ -20,7 +20,8 @@ require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 grunt.initConfig({
 	babel: {
 		options: {
-			sourceMap: true
+			sourceMap: true,
+			presets: ['babel-preset-es2015']
 		},
 		dist: {
 			files: {
