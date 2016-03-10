@@ -34,6 +34,33 @@ grunt.initConfig({
 grunt.registerTask('default', ['babel']);
 ```
 
+The task is perfectly capable of working with grunt (file arrays)[http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically], which allows to process multiple files:
+```js
+require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+
+grunt.initConfig({
+	babel: {
+		options: {
+			sourceMap: true,
+			presets: ['es2015']
+		},
+		dist: {
+			files: [{
+				expand: true,
+				cwd: 'app',
+				src: ['**/*.es6.js'],
+				dest: 'app',
+				ext: '.js'
+			}]
+			
+		}
+	}
+});
+
+grunt.registerTask('default', ['babel']);
+```
+
+
 
 ## Options
 
