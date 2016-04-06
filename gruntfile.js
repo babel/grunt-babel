@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 					presets: ['es2015']
 				},
 				files: {
-					'test/tmp/fixture-compiled.js': 'test/fixture.js'
+					'test/tmp/fixture-compiled.js': 'test/fixtures/fixture.js'
 				}
 			}
 		},

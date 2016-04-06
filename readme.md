@@ -2,7 +2,7 @@
 
 > Use next generation JavaScript, today, with [Babel](https://babeljs.io)
 
-*Issues with the output should be reported on the Babel [issue tracker](https://github.com/babel/babel/issues).*
+*Issues with the output should be reported on the Babel [issue tracker](https://phabricator.babeljs.io).*
 
 
 ## Install
@@ -42,4 +42,4 @@ See the Babel [options](https://babeljs.io/docs/usage/options), except for `file
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
