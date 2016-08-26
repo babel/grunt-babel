@@ -5,10 +5,16 @@ var babel = require('babel-core');
 module.exports = function (grunt) {
 	grunt.registerMultiTask('babel', 'Use next generation JavaScript, today', function () {
 		var options = this.options();
+		var callback = options.callback
+		var filenames = []
 
 		this.files.forEach(function (el) {
+			delete options.callback;
 			delete options.filename;
 			delete options.filenameRelative;
+
+			// for callback
+			filenames.push(el.dest)
 
 			options.sourceFileName = path.relative(path.dirname(el.dest), el.src[0]);
 
@@ -30,6 +36,11 @@ module.exports = function (grunt) {
 			if (res.map) {
 				grunt.file.write(el.dest + '.map', JSON.stringify(res.map));
 			}
+
 		});
+
+		if (callback) {
+			callback(grunt, filenames)
+		}
 	});
 };
