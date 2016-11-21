@@ -25,7 +25,7 @@ grunt.initConfig({
 		},
 		dist: {
 			files: {
-				'dist/app.js': 'src/app.js'
+				'dist/app.js': ['src/app.js']
 			}
 		}
 	}
