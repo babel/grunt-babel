@@ -31,7 +31,7 @@
     "javascript",
     "compiler"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "babel-core": "^6.7.4"
   },
   "devDependencies": {
