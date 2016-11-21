@@ -6,6 +6,9 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('babel', 'Use next generation JavaScript, today', function () {
 		var options = this.options();
 
+		var createdFiles = 0;
+		var createdMaps = 0;
+
 		this.files.forEach(function (el) {
 			delete options.filename;
 			delete options.filenameRelative;
@@ -26,10 +29,24 @@ module.exports = function (grunt) {
 			}
 
 			grunt.file.write(el.dest, res.code + sourceMappingURL + '\n');
+			createdFiles++;
 
 			if (res.map) {
 				grunt.file.write(el.dest + '.map', JSON.stringify(res.map));
+				createdMaps++;
 			}
 		});
+
+		grunt.log.ok(
+			createdFiles + ' ' +
+			grunt.util.pluralize(createdFiles, 'file/files') + ' created.'
+		);
+		if (options.sourceMap) {
+			grunt.log.ok(
+				createdMaps + ' ' +
+				grunt.util.pluralize(createdFiles, 'sourcemap/sourcemaps') + ' created.'
+			);
+		}
+
 	});
 };
