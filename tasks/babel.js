@@ -9,6 +9,10 @@ module.exports = function (grunt) {
 		this.files.forEach(function (el) {
 			delete options.filename;
 			delete options.filenameRelative;
+			
+			if (el.options){
+				options = el.options;
+			}
 
 			options.sourceFileName = path.relative(path.dirname(el.dest), el.src[0]);
 
