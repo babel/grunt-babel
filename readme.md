@@ -39,6 +39,25 @@ grunt.registerTask('default', ['babel']);
 
 See the Babel [options](https://babeljs.io/docs/usage/options), except for `filename` which is handled for you.
 
+#### options.callback
+Type: `Function`
+
+Callback to run after files are transpiled.
+
+Examples:
+
+```js
+grunt.initConfig({
+	babel: {
+		options: {
+			callback: function(grunt, files) {
+				console.log('Changed files:', files);
+			}
+		}
+	}
+  }
+});
+```
 
 ## License
 
