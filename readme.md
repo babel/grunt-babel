@@ -14,6 +14,16 @@ $ npm install --save-dev grunt-babel babel-preset-es2015
 
 ## Usage
 
+Create a `.babelrc` config in your project root. Assuming you have installed the [ES2015 Preset](https://babeljs.io/docs/plugins/preset-es2015/), in order to enable it you have to define it in your `.babelrc` file, like this:
+
+```json
+{
+  "presets": ["es2015"]
+}
+```
+
+Then, your `Gruntfile.js` must be something like this:
+
 ```js
 require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
