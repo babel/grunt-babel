@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					sourceMap: true,
-					presets: ['es2015']
+					presets: ['env']
 				},
 				files: {
 					'test/tmp/fixture-compiled.js': 'test/fixtures/fixture.js'
