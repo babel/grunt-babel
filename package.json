@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && grunt"
@@ -31,18 +31,16 @@
     "javascript",
     "compiler"
   ],
-  "dependencies": {
-    "babel-core": "^6.7.4"
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.0.11",
+    "babel-core": "7.0.0-alpha.19",
+    "babel-preset-env": "2.0.0-alpha.19",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0",
     "xo": "^0.16.0"
-  },
-  "peerDependencies": {
-    "grunt": ">=0.4.0"
   }
 }
