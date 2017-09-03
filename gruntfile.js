@@ -1,6 +1,9 @@
 'use strict';
 module.exports = function (grunt) {
 	grunt.initConfig({
+		cfg: {
+			test: 'test'
+		},
 		babel: {
 			compile: {
 				options: {
@@ -8,7 +11,7 @@ module.exports = function (grunt) {
 					presets: ['env']
 				},
 				files: {
-					'test/tmp/fixture-compiled.js': 'test/fixtures/fixture.js'
+					'<%= cfg.test %>/tmp/fixture-compiled.js': '<%= cfg.test %>/fixtures/fixture.js'
 				}
 			}
 		},

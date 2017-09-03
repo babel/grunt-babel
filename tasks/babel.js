@@ -10,6 +10,7 @@ module.exports = function (grunt) {
 			delete options.filename;
 			delete options.filenameRelative;
 
+			el = grunt.config.process(el);
 			options.sourceFileName = path.relative(path.dirname(el.dest), el.src[0]);
 
 			if (process.platform === 'win32') {
