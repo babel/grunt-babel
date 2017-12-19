@@ -16,6 +16,10 @@ module.exports = function (grunt) {
 				options.sourceFileName = options.sourceFileName.replace(/\\/g, '/');
 			}
 
+			if (typeof options.inputSourceMap === 'string') {
+				options.inputSourceMap = grunt.file.readJSON(options.inputSourceMap);
+			}
+
 			options.sourceMapTarget = path.basename(el.dest);
 
 			var res = babel.transformFileSync(el.src[0], options);
