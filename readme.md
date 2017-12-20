@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install --save-dev grunt-babel babel-core babel-preset-env
+$ npm install --save-dev grunt-babel @babel/core @babel/preset-env
 ```
 
 
