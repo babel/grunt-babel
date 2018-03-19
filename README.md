@@ -1,3 +1,6 @@
+> This readme is for grunt-babel v8 + Babel v7
+> Check the [7.x branch](https://github.com/babel/grunt-babel/tree/7.x) for docs with Babel v6
+
 # grunt-babel [![Build Status](https://travis-ci.org/babel/grunt-babel.svg?branch=master)](https://travis-ci.org/babel/grunt-babel)
 
 > Use next generation JavaScript, today, with [Babel](https://babeljs.io)
@@ -8,7 +11,7 @@
 ## Install
 
 ```
-$ npm install --save-dev grunt-babel babel-core babel-preset-env
+$ yarn add --dev grunt-babel @babel/core @babel/preset-env
 ```
 
 
@@ -21,7 +24,7 @@ grunt.initConfig({
 	babel: {
 		options: {
 			sourceMap: true,
-			presets: ['env']
+			presets: ['@babel/preset-env']
 		},
 		dist: {
 			files: {
