@@ -1,6 +1,16 @@
 'use strict';
 var path = require('path');
-var babel = require('babel-core');
+var babel;
+try {
+	babel = require('@babel/core');
+} catch (error) {
+	try{
+		babel = require('babel-core');
+	} catch (errorSub) {
+		console.error('Please install @babel/core or babel-core');
+		throw error;
+	}	
+}
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('babel', 'Use next generation JavaScript, today', function () {
