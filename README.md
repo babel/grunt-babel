@@ -10,6 +10,11 @@
 
 ## Install
 
+For grunt-babel v8..
+```
+$ yarn add --dev grunt-babel@8.x.x @babel/core @babel/preset-env
+```
+or for grunt-babel v7...
 ```
 $ yarn add --dev grunt-babel @babel/core @babel/preset-env
 ```
