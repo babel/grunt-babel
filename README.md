@@ -9,9 +9,17 @@
 
 ## Install
 
-```
+For Babel 7.x and grunt-babel v8
+```sh
 $ yarn add --dev grunt-babel @babel/core @babel/preset-env
 ```
+
+For Babel 6.x and grunt-babel v7
+```sh
+$ yarn add --dev grunt-babel@7 @babel-core babel-preset-env
+```
+Note: See the [7.x branch](https://github.com/babel/grunt-babel/tree/7.x) for more examples of
+usage of Babel 6.x. This README is primarily applicable for Babel 7.x
 
 ## Usage
 
