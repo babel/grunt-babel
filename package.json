@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=6.9"
   },
   "scripts": {
     "lint": "eslint .",
