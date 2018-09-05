@@ -27,36 +27,44 @@ module.exports = function(grunt) {
     "babel",
     "Use next generation JavaScript, today",
     function() {
-      const options = this.options();
+      const done = this.async();
 
-      this.files.forEach(function(el) {
-        delete options.filename;
-        delete options.filenameRelative;
+      const options = Object.assign({}, this.options());
+      delete options.filename;
+      delete options.filenameRelative;
 
-        options.sourceFileName = path.relative(
-          path.dirname(el.dest),
-          el.src[0]
-        );
+      // Async reduce so that the files are written and logged in order.
+      this.files
+        .reduce((acc, el) => {
+          const filename = el.src[0];
 
-        if (process.platform === "win32") {
-          options.sourceFileName = options.sourceFileName.replace(/\\/g, "/");
-        }
+          const opts = Object.assign({}, options);
 
-        const res = babel.transformFileSync(el.src[0], options);
-        let sourceMappingURL = "";
+          opts.sourceFileName = path.relative(path.dirname(el.dest), el.src[0]);
 
-        if (res.map) {
-          sourceMappingURL =
-            "\n//# sourceMappingURL=" + path.basename(el.dest) + ".map";
-        }
+          if (process.platform === "win32") {
+            opts.sourceFileName = opts.sourceFileName.replace(/\\/g, "/");
+          }
 
-        grunt.file.write(el.dest, res.code + sourceMappingURL + "\n");
+          return acc
+            .then(() => babel.transformFileAsync(filename, opts))
+            .then(res => {
+              let sourceMappingURL = "";
 
-        if (res.map) {
-          res.map.file = path.basename(el.dest);
-          grunt.file.write(el.dest + ".map", JSON.stringify(res.map));
-        }
-      });
+              if (res.map) {
+                sourceMappingURL =
+                  "\n//# sourceMappingURL=" + path.basename(el.dest) + ".map";
+              }
+
+              grunt.file.write(el.dest, res.code + sourceMappingURL + "\n");
+
+              if (res.map) {
+                res.map.file = path.basename(el.dest);
+                grunt.file.write(el.dest + ".map", JSON.stringify(res.map));
+              }
+            });
+        }, Promise.resolve())
+        .then(() => done(), err => done(err));
     }
   );
 };
