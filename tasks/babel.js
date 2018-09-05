@@ -32,6 +32,12 @@ module.exports = function(grunt) {
       const options = Object.assign({}, this.options());
       delete options.filename;
       delete options.filenameRelative;
+      options.caller = Object.assign(
+        {
+          name: "grunt-babel",
+        },
+        options.caller
+      );
 
       // Async reduce so that the files are written and logged in order.
       this.files
