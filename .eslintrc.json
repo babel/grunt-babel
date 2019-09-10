@@ -1,11 +1,9 @@
 {
     "root": true,
-    "extends": "babel",
+    "extends": ["babel", "prettier"],
     "plugins": ["prettier"],
     "rules": {
-      "curly": ["error", "multi-line"],
-      "prettier/prettier": "error",
-      "no-case-declarations": "error"
+      "prettier/prettier": "error"
     },
     "env": {
       "node": true

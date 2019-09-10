@@ -7,6 +7,6 @@
     "bracketSpacing": true,
     "jsxBracketSameLine": false,
     "tabWidth": 2,
-    "parser": "babylon",
+    "parser": "babel",
     "printWidth": 80
 }

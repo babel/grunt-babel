@@ -40,15 +40,16 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "babel-eslint": "^8.0.0",
-    "eslint": "^4.19.0",
-    "eslint-config-babel": "^7.0.2",
-    "eslint-plugin-flowtype": "^2.46.1",
-    "eslint-plugin-prettier": "^2.6.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
     "prettier": "^1.11.1"
   }
 }
