@@ -23,6 +23,7 @@ usage of Babel 6.x. This README is primarily applicable for Babel 7.x
 
 ## Usage
 
+### Option with load-grunt-tasks
 ```js
 require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
@@ -39,6 +40,27 @@ grunt.initConfig({
     }
   }
 });
+
+grunt.registerTask('default', ['babel']);
+```
+
+### Option with loadNpmTasks
+```js
+grunt.initConfig({
+  babel: {
+    options: {
+      sourceMap: true,
+      presets: ['@babel/preset-env']
+    },
+    dist: {
+      files: {
+        'dist/app.js': 'src/app.js'
+      }
+    }
+  }
+});
+
+grunt.loadNpmTasks('grunt-babel');
 
 grunt.registerTask('default', ['babel']);
 ```
