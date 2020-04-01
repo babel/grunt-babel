@@ -55,6 +55,12 @@ module.exports = function(grunt) {
           return acc
             .then(() => babel.transformFileAsync(filename, opts))
             .then(res => {
+              if (!res) {
+                // Simply copy file as nothing changed
+                grunt.file.write(el.dest, grunt.file.read(filename));
+                return;
+              }
+
               let sourceMappingURL = "";
 
               if (res.map) {
