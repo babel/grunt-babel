@@ -7,7 +7,7 @@ try {
 } catch (err) {
   if (err.code === "MODULE_NOT_FOUND") {
     err.message +=
-      "\n grunt-babel@8 requires Babel 7.x (the package '@babel/core'). " +
+      "\n grunt-babel@8 requires Babel 7.x or 8.x (the package '@babel/core'). " +
       "If you'd like to use Babel 6.x ('babel-core'), you should install 'grunt-babel@7'.";
   }
   throw err;
