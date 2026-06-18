@@ -16,8 +16,8 @@ jobs:
         node: [6, 22, 24, 26]
         babel: [7, 8]
         exclude:
-          # Babel 8 requires Node.js 20+, so it cannot run on Node.js 8.
-          - node: 8
+          # Babel 8 requires Node.js 20+, so it cannot run on Node.js 6.
+          - node: 6
             babel: 8
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies (Babel 7)
-        run: yarn install --frozen-lockfile
+        # --ignore-engines: dev-only tools such as eslint declare a newer
+        # minimum Node.js version, but they are not executed in this job
+        # (linting runs in its own job), so installing them on Node.js 6 is fine.
+        run: yarn install --frozen-lockfile --ignore-engines
 
       - name: Upgrade dev dependencies to Babel 8
         if: matrix.babel == 8
