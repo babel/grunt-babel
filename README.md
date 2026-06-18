@@ -1,7 +1,7 @@
-> This readme is for grunt-babel v8 + Babel v7
+> This readme is for grunt-babel v8 + Babel v7 or v8
 > Check the [7.x branch](https://github.com/babel/grunt-babel/tree/7.x) for docs with Babel v6
 
-# grunt-babel [![Build Status](https://travis-ci.org/babel/grunt-babel.svg?branch=master)](https://travis-ci.org/babel/grunt-babel)
+# grunt-babel [![CI](https://github.com/babel/grunt-babel/actions/workflows/test.yml/badge.svg)](https://github.com/babel/grunt-babel/actions/workflows/test.yml)
 
 > Use next generation JavaScript, today, with [Babel](https://babeljs.io)
 
